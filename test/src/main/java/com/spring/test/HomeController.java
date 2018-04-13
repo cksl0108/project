@@ -43,4 +43,10 @@ public class HomeController {
 	public String login() {
 		return "main/login";
 	}
+	
+	@RequestMapping(value="/chat")
+	public String chat() {
+		return "main/chat";
+	}
+	
 }
