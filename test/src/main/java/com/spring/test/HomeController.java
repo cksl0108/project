@@ -41,14 +41,21 @@ public class HomeController {
 	
 	
 	@RequestMapping(value="/main/{var}")
-	public String login(@PathVariable String var) {
+	public String main(@PathVariable String var) {
 		String returnURL = "main/"+var;
 		return returnURL;
 	}
 	
-	@RequestMapping(value="/chat")
-	public String chat() {
-		return "main/chat";
+	@RequestMapping(value="/gallery/{var}")
+	public String gallery(@PathVariable String var) {
+		String returnURL = "gallery/"+var;
+		return returnURL;
+	}
+	
+	@RequestMapping(value="/board/{var}")
+	public String board(@PathVariable String var) {
+		String returnURL = "board/"+var;
+		return returnURL;
 	}
 	
 }
