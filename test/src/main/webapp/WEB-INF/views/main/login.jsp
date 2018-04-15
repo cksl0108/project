@@ -25,16 +25,30 @@
             <div class="panel-body">
                 <form id="login-form">
                     <div>
-                        <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+                        <input type="text" class="form-control" id="username" placeholder="Id" autofocus required="required">
                     </div>
                     <div>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required="required">
                     </div>
                     <div>
-                        <button type="submit" class="form-control btn btn-primary">로그인</button>
+                    	<input type="button" value="로그인" class="btn btn-primary" onclick="doLogin();">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+	function doLogin(){
+		var id = $("#username").val();
+		var pass = $("#password").val();
+		
+		console.log(id + ' / ' + pass);
+		if(id == 'cksl0108' && pass == '0108'){
+			location.href = '/';
+		}else{
+			alert("아이디 혹은 비밀번호가 맞지 않습니다.");
+		}
+	}
+</script>
